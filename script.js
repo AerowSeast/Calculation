@@ -6,6 +6,10 @@ buttons.forEach(item => {
             display.innerText = "";
         } else if (item.innerText == "=") {
             display.innerText = eval(display.innerText);
+            if (eval(display.innerText) == undefined) { 
+                display.innerText = "";
+                alert("請重新輸入正確的數值");
+            }
          }
          else { 
             display.innerText += item.innerText;
